@@ -1,0 +1,33 @@
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Entries
+{% endblock %}
+
+{% block main %}
+    {% for entry in entries:%}
+            <div class="entry">
+                <p>
+                   {{ entry["entry"] }}
+
+                </p>
+                <hr>
+                <entryinfo>
+                    {{ (entry["date"]) }} | {{ (entry["time"]) }} | Tagged with:
+                    {%  if(entry["tag1"] != "None") %}
+                    {{ entry["tag1"]  }}
+                    {% endif %}
+                    {%  if(entry["tag2"] != "None") %}
+                    {{ entry["tag2"]  }}
+                    {% endif %}
+                    {%  if(entry["tag3"] != "None") %}
+                    {{ entry["tag3"]  }}
+                    {% endif %}
+                </entryinfo>
+            </div>
+            <br>
+
+    {% endfor %}
+{% endblock %}

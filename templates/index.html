@@ -1,0 +1,52 @@
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<h1>Index</h1>
+<table class = "table table-light">
+    <thead>
+        <tr>
+            <th></th>
+            <th scope = "col">Stock</th>
+            <th scope = "col">Shares Owned</th>
+            <th scope = "col">Current Price</th>
+            <th scope = "col">Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for holding in holdings:%}
+        <tr>
+            <th></th>
+            <td>{{ holding["stock"] }}</td>
+            <td>{{ holding["SUM(shares)"] }}</td>
+            <td>{{ holding["price"] }}</td>
+            <td>{{ holding["value"] }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <th></th>
+            <td>Current Cash</td>
+            <td></td>
+            <td></td>
+            <td>{{ currentcash }}</td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>Cash + Stocks</td>
+            <td></td>
+            <td></td>
+            <td>{{ totalworth }}</td>
+        </tr>
+    </tbody>
+</table>
+<p>Current Cash in Account: {{ currentcash }}</p>
+<p>Total Value of Cash and Stocks: {{ totalworth }}</p>
+<form action="/add" method="get">
+    <button class="btn btn-primary" type="submit">Add Funds</button>
+</form>
+{% endblock %}

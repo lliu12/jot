@@ -1,0 +1,105 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+body
+{
+    /*
+    * https://source.unsplash.com/1600x900/?nature,water
+    * Optionally, to specify a size, place it after the base URL.
+    */
+    background-image: url("https://source.unsplash.com/featured/?wallpapers/600x400/");
+    background-size: cover;
+    background-repeat: repeat-x;
+}
+
+form
+{
+    opacity: .5;
+    outline-style: none;
+}
+
+label
+{
+    background-color: #ffffff;
+    opacity: .5;
+}
+
+.navbar {
+    opacity: .7;
+}
+
+.entry
+{
+    font-size: 18;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 20px;
+    opacity:.6;
+}
+
+tag
+{
+    font-size: 18;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 7px;
+    opacity:.6;
+}
+
+entryinfo
+{
+    font-size: 10px;
+}
+
+h2
+{
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 7px;
+    opacity:.6;
+}
